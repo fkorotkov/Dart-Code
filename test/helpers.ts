@@ -17,7 +17,7 @@ import { log, logError, logTo, logWarn } from "../src/utils/log";
 import { TestResultsProvider } from "../src/views/test_view";
 import sinon = require("sinon");
 
-export const ext = vs.extensions.getExtension(dartCodeExtensionIdentifier);
+export const ext = vs.extensions.getExtension(dartCodeExtensionIdentifier)!;
 export let extApi: {
 	analyzerCapabilities: AnalyzerCapabilities,
 	currentAnalysis: () => Promise<void>,

@@ -16,7 +16,7 @@ export class LoggingCommands implements vs.Disposable {
 		);
 	}
 
-	private async startLogging(): Promise<string> {
+	private async startLogging(): Promise<string | undefined> {
 		const logFilename = path.join(forceWindowsDriveLetterToUppercase(this.extensionLogPath), this.generateFilename());
 		const logUri = vs.Uri.file(logFilename);
 		createFolderForFile(logFilename);
